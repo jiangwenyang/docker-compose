@@ -1,0 +1,17 @@
+---
+services:
+  code-server:
+    image: lscr.io/linuxserver/code-server:latest
+    container_name: code-server
+    environment:
+      - PUID=1026
+      - PGID=100
+      - TZ=Asia/Shanghai
+      - PASSWORD=1121 #optional
+      - SUDO_PASSWORD=1121 #optional
+      - DEFAULT_WORKSPACE=/config/docker/docker-compose #optional
+    volumes:
+      - /volume1:/config
+    ports:
+      - 8443:8443
+    restart: unless-stopped
