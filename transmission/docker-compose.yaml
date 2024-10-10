@@ -1,0 +1,20 @@
+name: transmission
+services:
+    transmission:
+        container_name: transmission
+        ports:
+            - 9091:9091
+            - 51413:51413
+            - 51413:51413/udp
+        environment:
+            - PUID=1026
+            - PGID=100
+            - TZ=Asia/Shanghai
+            - USER=jiangwenyang
+            - PASS=1121
+        volumes:
+            - /volume1/docker/transmission/data:/config
+            - /volume1/downloads:/downloads
+            - /volume1/downloads/watch:/watch
+        restart: always
+        image: ghcr.io/linuxserver/transmission
