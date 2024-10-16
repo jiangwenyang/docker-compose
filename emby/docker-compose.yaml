@@ -5,7 +5,9 @@ services:
         environment:
             - PUID=1026
             - PGID=100
-            - GIDLIST=0
+            - GIDLIST=100
+            - HTTP_PROXY=192.168.100.222:7890
+            - HTTPS_PROXY=192.168.100.222:7890
         volumes:
             - '/volume1/Data:/Data'
             - '/volume1/video:/video'
