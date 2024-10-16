@@ -9,17 +9,17 @@ services:
       - PUID=1026
       - PGID=100
       - UMASK_SET=022
-      - RPC_SECRET=P3TERX
+      - RPC_SECRET=19951121
       - RPC_PORT=6800
       - LISTEN_PORT=6888
       - DISK_CACHE=64M
       - IPV6_MODE=false
       - UPDATE_TRACKERS=true
-      - CUSTOM_TRACKER_URL=https://github.com/ngosang/trackerslist/blob/master/trackers_all.txt
+      - CUSTOM_TRACKER_URL=
       - TZ=Asia/Shanghai
     volumes:
       - /volume1/docker/aria2-pro:/config
-      - /volume1/downloads:/downloads
+      - /volume1/downloads/complete:/downloads
 # If you use host network mode, then no port mapping is required.
 # This is the easiest way to use IPv6 networks.
     network_mode: host
