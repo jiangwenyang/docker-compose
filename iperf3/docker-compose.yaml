@@ -6,3 +6,4 @@ services:
             - '5201:5201'
         image: networkstatic/iperf3
         command: '-s'
+        restart: unless-stopped

@@ -19,3 +19,4 @@ services:
             - '8921:8920'
         container_name: emby
         image: 'xinjiawei1/emby_unlockd:latest'
+        restart: unless-stopped

@@ -16,5 +16,5 @@ services:
             - /volume1/docker/transmission/data:/config
             - /volume1/downloads:/downloads
             - /volume1/downloads/watch:/watch
-        restart: always
+        restart: unless-stopped
         image: ghcr.io/linuxserver/transmission

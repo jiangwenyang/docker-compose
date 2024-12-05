@@ -5,3 +5,4 @@ services:
         ports:
             - 3806:8080
         image: herberthe0229/iptv-sources:latest
+        restart: unless-stopped
