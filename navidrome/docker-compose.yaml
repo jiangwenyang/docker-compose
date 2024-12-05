@@ -13,4 +13,4 @@ services:
       ND_BASEURL: ""
     volumes:
       - "/volume1/docker/navidrome:/data"
-      - "/volume1/Data/音乐:/music:ro"i
+      - "/volume1/Data/音乐:/music:ro"
