@@ -1,0 +1,9 @@
+name: iptv-api
+services:
+    iptv-api:
+        volumes:
+            - /volume1/docker/iptv-api/config:/iptv-api/config
+            - /volume1/docker/iptv-api/output:/iptv-api/output
+        ports:
+            - 8100:8000
+        image: guovern/iptv-api
