@@ -1,0 +1,15 @@
+version: "3"
+services:
+  ani-rss:
+    container_name: ani-rss
+    volumes:
+      - /volume1/docker/ani-rss/config:/config
+      - /volume1/Data:/Data
+    ports:
+      - 7789:7789
+    environment:
+      - PORT=7789
+      - CONFIG=/config
+      - TZ=Asia/Shanghai
+    restart: always
+    image: wushuo894/ani-rss
