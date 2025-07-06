@@ -10,4 +10,6 @@ services:
       - /volume1/docker/homepage/icons:/app/public/icons
       - /volume1/docker/homepage/config:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
+    environment:
+      HOMEPAGE_ALLOWED_HOSTS: home.jwy.life
     restart: unless-stopped
