@@ -2,7 +2,7 @@ services:
   web:
     image: whyour/qinglong:latest # 基于 Debian 的版本：whyour/qinglong:debian  
     volumes:
-      - ./data:/ql/data
+      - /volume1/docker/qinglong:/ql/data
     ports:
       - "5700:5700"
     environment:
