@@ -6,6 +6,8 @@ services:
             - PUID=1026
             - PGID=100
             - GIDLIST=100
+            - HTTP_PROXY=http://192.168.100.225:7890
+            - HTTPS_PROXY=http://192.168.100.225:7890
         volumes:
             - '/volume1/Data:/Data'
             - '/volume1/video:/video'
@@ -18,3 +20,4 @@ services:
         container_name: emby
         image: 'xinjiawei1/emby_unlockd:latest'
         restart: always
+

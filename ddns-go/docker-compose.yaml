@@ -1,0 +1,10 @@
+name: ddns-go
+services:
+    ddns-go:
+        container_name: ddns-go
+        restart: always
+        ports:
+            - 9876:9876
+        volumes:
+            - /volume1/docker/ddns-go:/root
+        image: ghcr.io/jeessy2/ddns-go
