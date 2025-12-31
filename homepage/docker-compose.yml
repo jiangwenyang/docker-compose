@@ -1,7 +1,7 @@
 version: "3.3"
 services:
   homepage:
-    image: ghcr.io/gethomepage/homepage:latest
+    image: gethomepage/homepage:latest
     container_name: homepage
     ports:
       - 3000:3000
@@ -11,5 +11,5 @@ services:
       - /volume1/docker/homepage/config:/app/config # Make sure your local config directory exists
       - /var/run/docker.sock:/var/run/docker.sock # (optional) For docker integrations
     environment:
-      HOMEPAGE_ALLOWED_HOSTS: home.jwy.life
+      HOMEPAGE_ALLOWED_HOSTS: home.jwy.life:3000
     restart: unless-stopped

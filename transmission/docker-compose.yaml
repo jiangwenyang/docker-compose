@@ -17,5 +17,5 @@ services:
             - /volume1/downloads:/downloads
             - /volume1/downloads/watch:/watch
             - /volume1/Data:/Data
-        restart: unless-stopped
+        restart: always
         image: ghcr.io/linuxserver/transmission
